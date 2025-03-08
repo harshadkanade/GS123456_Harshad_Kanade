@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Stores from "./pages/Stores";
+import SKUs from "./pages/SKUs";
+import Planning from "./pages/Planning";
+import Chart from "./pages/Chart";
+import { Box } from "@mui/material";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Navbar />
+      <Box display="flex">
+        <Sidebar />
+        <Box flexGrow={1} p={2}>
+          <Routes>
+            <Route path="/stores" element={<Stores />} />
+            <Route path="/skus" element={<SKUs />} />
+            <Route path="/planning" element={<Planning />} />
+            <Route path="/chart" element={<Chart />} />
+            <Route path="/" element={<Stores />} />
+          </Routes>
+        </Box>
+      </Box>
+    </Router>
+  );
+};
 
-export default App
+export default App;
