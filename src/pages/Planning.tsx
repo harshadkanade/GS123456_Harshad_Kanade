@@ -1,4 +1,3 @@
-// src/pages/Planning.tsx
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSalesUnits } from "../redux/salesSlice";
@@ -14,7 +13,6 @@ const Planning: React.FC = () => {
 
   const weeks = Array.from({ length: 52 }, (_, i) => ({
     week: `W${String(i + 1).padStart(2, "0")}`,
-    month: `M${Math.ceil((i + 1) / 4)}`,
   }));
 
   const rowData = stores.flatMap((store: any) =>
@@ -27,8 +25,8 @@ const Planning: React.FC = () => {
   );
 
   const columnDefs = [
-    { headerName: "Store", field: "store", pinned: "left" },
-    { headerName: "SKU", field: "sku", pinned: "left" },
+    { headerName: "Store", field: "store", pinned: "left" as "left" },
+    { headerName: "SKU", field: "sku", pinned: "left" as "left" },
     ...weeks.map((week) => ({
       headerName: week.week,
       children: [

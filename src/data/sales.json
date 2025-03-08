@@ -1,0 +1,4 @@
+[
+  { "storeId": "ST035", "skuId": "SK001", "week": "W01", "units": 10 },
+  { "storeId": "ST035", "skuId": "SK002", "week": "W01", "units": 5 }
+]

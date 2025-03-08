@@ -1,0 +1,4 @@
+[
+  { "id": "SK001", "label": "SKU001", "price": 100, "cost": 50 },
+  { "id": "SK002", "label": "SKU002", "price": 150, "cost": 75 }
+]

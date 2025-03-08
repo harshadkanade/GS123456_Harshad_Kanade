@@ -1,11 +1,10 @@
-// src/components/Sidebar.tsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import StoreIcon from "@mui/icons-material/Store";
 import LabelIcon from "@mui/icons-material/Label";
 import GridOnIcon from "@mui/icons-material/GridOn";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import { useNavigate } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();

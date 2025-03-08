@@ -1,4 +1,3 @@
-// src/pages/SKUs.tsx
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSKU, removeSKU, updateSKU } from "../redux/skusSlice";

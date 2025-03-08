@@ -1,4 +1,3 @@
-// src/pages/Chart.tsx
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import {
